@@ -130,9 +130,8 @@ enum actionSheetButtonIndex {
     toolBar.barStyle = barStyle;
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
         toolBar.barTintColor = self.barTintColor;
-    } else {
-        toolBar.tintColor = self.tintColor;
     }
+    toolBar.tintColor = self.tintColor;
     [self.view addSubview:toolBar];
 
     buttonGoBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonTouchUp:)];
