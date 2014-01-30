@@ -29,6 +29,7 @@
 @protocol TSMiniWebBrowserDelegate <NSObject>
 @optional
 -(void) tsMiniWebBrowserDidDismiss;
+-(void) tsMiniWebBrowserDidAppear;
 @end
 
 typedef enum {

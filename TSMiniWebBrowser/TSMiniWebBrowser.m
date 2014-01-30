@@ -273,6 +273,16 @@ enum actionSheetButtonIndex {
     [super viewDidUnload];
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // Notify the delegate
+    if (self.delegate != NULL && [self.delegate respondsToSelector:@selector(tsMiniWebBrowserDidAppear)]) {
+        [delegate tsMiniWebBrowserDidAppear];
+    }
+}
+
 - (void) viewWillAppear:(BOOL)animated
 {
 	for (id subview in self.view.subviews)
